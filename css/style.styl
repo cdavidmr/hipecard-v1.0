@@ -4,12 +4,12 @@ navcolor = #002f30
 bgcolor = #d1ccbe
 colorp = white //color letra principal 
 bgsidebar = #006d55
-btnclick = rgba(255, 170, 0, .2)
+btnclick = rgba(1, 20, 4, .4)
 ficons = 24px
 fontbrand = 22px 'Dosis', sans-serif
 fontmain = 'Ubuntu Condensed', sans-serif
 fontnav = 16px  
-fontside = 18px 
+fontsideicon = 24px 
 fsubtitle = 24px
 colorhover = #d6ff51
 box-shadow()
@@ -72,7 +72,7 @@ nav ul li
 	margin-right 3px
 	padding-top 3px
 .social
-	background-color colorp
+	background-color bgcolor
 	border-radius 50%
 	font-size 14px
 	margin 2px
@@ -82,30 +82,35 @@ nav ul li
 	background-color bgsidebar
 	box-shadow 6px -2px 12px -5px rgba(0,0,0,0.75)
 	color colorp
-	font-size fontside
+	font-size fontsideicon
 	height 100%
 	left 0px
-	width 200px
+	width auto
 	position absolute
 	z-index -1
 .subtitle
 	cursor pointer
 	font-size fsubtitle
 .ulside
-	padding 25px
+	padding 15px
 .liside
 	cursor pointer
-	padding 5px 0px 5px 5px
+	padding 5px 5px 10px 5px
 //side icon animations
-.ulside li span
+.ulside li i
+	font-size 12px
+	left -150%
+	padding-left 7px
+	padding-top 25px
 	position absolute
-	left -100%
-	transition left .3s
+	transition left .5s
 #favs:hover, #toprated:hover, #views:hover, #destacados:hover
 	color colorhover
-	font-weight bold
-	span
-		position relative
-		padding-right 10px
+	i
 		left 0%
-	
+		padding-left 7px
+		padding-top 25px
+		position absolute
+#favs:active, #toprated:active, #views:active, #destacados:active
+	i
+		transform scale(1.2)
