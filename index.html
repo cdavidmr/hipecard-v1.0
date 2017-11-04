@@ -5,7 +5,6 @@
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/icons.css">
-	<link rel="stylesheet" href="js/jquery-3.2.1.min.js">
 	<title>HipeCard</title>
 </head>
 <body>
@@ -20,8 +19,18 @@
 			<li class="social"><span class="icon-brand9"></span></li>
 		</ul>
 	</nav>
-	<div class="sidebar">sidebar</div>
+	<div class="sidebar">
+		<ul class="ulside">
+			<li class="subtitle">Top Topics</li>
+			<li id="destacados" class="liside"><span class="icon-star"></span>Destacados</li>
+			<li id="toprated" class="liside"><span class="icon-thumbs-up"></span>Mejor puntuados</li>
+			<li id="favs" class="liside"><span class="icon-heart"></span>Favoritos</li>
+			<li id="views" class="liside"><span class="icon-eye"></span>Mas vistos</li>
+		</ul>
+	</div>
 	<div class="paneles"></div>	
 	<div class="navbot"></div>	
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/my-js.js"></script>
 </body>
 </html>
