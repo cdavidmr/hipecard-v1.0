@@ -1,20 +1,38 @@
 main-color = rgb(0, 77, 79)
+colp = white /* color letra principal */
 box-shadow()
 	-webkit-box-shadow arguments
 	-moz-box-shadow arguments
 	box-shadow arguments
+transform()
+	-webkit-transform arguments
+    -moz-transform arguments
+    -o-transform arguments
+*
+	margin 0
+	padding 0
 .navbar
 	background-color main-color
 	box-shadow 2px 3px 10px -2px rgba(0,0,0,0.75)
-	color white
-	font-size 16px
-	height 24px
-	width 100%
-	left 0px
-	position absolute
-	top 0px
-	z-index  2
-.nav-items
-	float left
+	z-index 2
+nav ul 
+	display inline-flex 
 	list-style none
-	padding-left 0px
+nav ul li
+	color colp
+	cursor pointer
+	display inline-flex
+	font-size 22px
+	padding 10px
+nav ul li:active
+	animation-name pulsebtn
+	animation-duration 5s 
+@keyframes pulsebtn
+	0%
+		opacity 0
+		transform scale(.5)
+	50%
+		opacity 1
+	100%
+		opacity 1
+		transform scale(1)
