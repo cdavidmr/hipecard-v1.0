@@ -5,21 +5,22 @@
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<link rel="stylesheet" href="css/icons.css">
 	<link rel="stylesheet" href="css/style.css">
+<!-- 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
 	<title>HipeCard</title>
 </head>
-<body>
+<body>	
 	<nav class="navbar">
 		<ul>
-			<li class="btn"><span class="icon-menu"></span></li>
+			<li class="btn-toggle" onclick="btnToggle()"><span id="btn-x"  class="iconr icon-x"></span></li>
 			<li class="brand">HipeCards!</li>
 		</ul>
 		<ul class="nav-right">
-			<li class="social"><span class="icon-brand"></span></li>
-			<li class="social"><span class="icon-brand5"></span></li>
-			<li class="social"><span class="icon-brand9"></span></li>
+			<li class="iconr social"><span class="icon-brand"></span></li>
+			<li class="iconr social"><span class="icon-brand5"></span></li>
+			<li class="iconr social"><span class="icon-brand9"></span></li>
 		</ul>
 	</nav>
-	<div class="sidebar">
+	<div id="side" class="sidebar">
 		<ul class="ulside">
 			<li id="destacados" class="liside"><span class="icon-star"></span><i>Destacados</i></li>
 			<li id="toprated" class="liside"><span class="icon-thumbs-up"></span><i>Más Likes</i></li>

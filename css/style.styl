@@ -12,6 +12,7 @@ fontnav = 16px
 fontsideicon = 24px 
 fsubtitle = 24px
 colorhover = #d6ff51
+fontsideiconmin = 18px
 box-shadow()
 	-webkit-box-shadow arguments
 	-moz-box-shadow arguments
@@ -30,6 +31,10 @@ transition()
   	-moz-transition arguments
   	-o-transition arguments
   	transition arguments
+animations()
+	-webkit-animation arguments
+	-moz-animation arguments
+	-o-animation arguments
 body
 	background-color bgcolor
 	font-family fontmain
@@ -51,17 +56,18 @@ nav ul li
 	box-shadow 2px 3px 10px -2px rgba(0,0,0,0.75)
 	font-size fontnav
 	z-index 1
-.btn
+.btn-toggle
 	font-size ficons
-.btn:active, .social:active
+.btn-toggle:active, .social:active
 	border-radius 50%
 	transform scale(1.1)
 	background-color btnclick
 .brand
+	margin-left -15px
 	margin-top -3px
 	font fontbrand
 .brand:active
-	transform scale(1.2)
+	transform scale(1.1)
 .brand:hover, .btn:hover
 	color colorhover
 .social:hover
@@ -84,7 +90,7 @@ nav ul li
 	color colorp
 	font-size fontsideicon
 	height 100%
-	left 0px
+	left 0%
 	width auto
 	position absolute
 	z-index -1
@@ -99,13 +105,15 @@ nav ul li
 //side icon animations
 .ulside li i
 	font-size 12px
-	left -150%
+	left -100%
 	padding-left 7px
 	padding-top 25px
 	position absolute
 	transition left .5s
 #favs:hover, #toprated:hover, #views:hover, #destacados:hover
 	color colorhover
+	span
+		animation rotateicons .5s
 	i
 		left 0%
 		padding-left 7px
@@ -114,3 +122,30 @@ nav ul li
 #favs:active, #toprated:active, #views:active, #destacados:active
 	i
 		transform scale(1.2)
+.iconr:hover
+	animation rotateicons .5s
+//Animations
+@keyframes rotateicons {
+	from {
+		transform rotate(0deg)
+	}
+	to { 
+		transform rotate(360deg)
+	}
+}
+//Responsive
+@media (max-width: 576px) 
+	.sidebar
+		font-size fontsideiconmin
+	.ulside
+		padding 5px
+	.ulside li i
+		display none
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) { }
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { }
