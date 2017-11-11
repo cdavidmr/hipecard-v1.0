@@ -35,6 +35,15 @@ animations()
 	-webkit-animation arguments
 	-moz-animation arguments
 	-o-animation arguments
+box-sizing()
+  	-webkit-box-sizing arguments
+  	-moz-box-sizing arguments
+  	box-sizing arguments
+filter()
+	-webkit-filter arguments
+	-moz-filter arguments
+	-o-filter arguments
+	-ms-filter arguments
 body
 	background-color bgcolor
 	font-family fontmain
@@ -49,6 +58,7 @@ nav ul li
 	display inline-flex
 	padding 10px
 *
+	box-sizing border-box
 	margin 0
 	padding 0
 .navbar
@@ -60,15 +70,11 @@ nav ul li
 	font-size ficons
 .btn-toggle:active, .social:active
 	border-radius 50%
-	transform scale(1.1)
 	background-color btnclick
 .brand
-	margin-left -15px
 	margin-top -3px
 	font fontbrand
-.brand:active
-	transform scale(1.1)
-.brand:hover, .btn:hover
+.brand:hover, .btn-toggle:hover
 	color colorhover
 .social:hover
 	background-color colorhover
@@ -84,24 +90,11 @@ nav ul li
 	margin 2px
 	margin-top -3px
 	padding 5px
-.sidebar
-	background-color bgsidebar
-	box-shadow 6px -2px 12px -5px rgba(0,0,0,0.75)
-	color colorp
-	font-size fontsideicon
-	height 100%
-	left 0%
-	width auto
-	position absolute
-	z-index -1
 .subtitle
 	cursor pointer
 	font-size fsubtitle
 .ulside
 	padding 15px
-.liside
-	cursor pointer
-	padding 5px 5px 10px 5px
 //side icon animations
 .ulside li i
 	font-size 12px
@@ -109,21 +102,18 @@ nav ul li
 	padding-left 7px
 	padding-top 25px
 	position absolute
-	transition left .5s
-#favs:hover, #toprated:hover, #views:hover, #destacados:hover
+	transition left .150s
+.liside:hover
 	color colorhover
-	span
-		animation rotateicons .5s
+	cursor pointer
 	i
 		left 0%
 		padding-left 7px
 		padding-top 25px
 		position absolute
-#favs:active, #toprated:active, #views:active, #destacados:active
+.liside:active
 	i
 		transform scale(1.2)
-.iconr:hover
-	animation rotateicons .5s
 //Animations
 @keyframes rotateicons {
 	from {
@@ -134,18 +124,58 @@ nav ul li
 	}
 }
 //Responsive
+//Mobile
 @media (max-width: 576px) 
+	.btn-toggle
+		display none
+	.liside
+		padding 0px 10px 0px 10px
+	.sidebar ul
+		display inline-flex
+	.sidebar ul li
+		display inline-flex
 	.sidebar
-		font-size fontsideiconmin
+		text-align center
+		background-color rgba(0, 47, 48, .75)
+		box-shadow 6px -2px 12px -5px rgba(0,0,0,0.75)
+		color colorp
+		font-size fontsideicon
+		bottom 0%
+		float bottom
+		width 100%
+		position absolute
 	.ulside
-		padding 5px
+		padding 10px
 	.ulside li i
 		display none
+		
 // Medium devices (tablets, 768px and up)
-@media (min-width: 768px) { }
+@media (min-width: 768px)
+	.brand
+		margin-left -10px
+	.liside
+		padding 5px 5px 10px 5px
+		span 
+			display inline-flex
+			transform rotate(0deg)
+			transition transform .150s
+	.iconr:hover
+		animation rotateicons .3s
+	.liside:hover
+		span
+			transform rotate(-15deg)
 
 // Large devices (desktops, 992px and up)
-@media (min-width: 992px) { }
+@media (min-width: 992px)
+	.sidebar
+		background-color bgsidebar
+		box-shadow 6px -2px 12px -5px rgba(0,0,0,0.75)
+		color colorp
+		font-size fontsideicon
+		height 100%
+		left 0%
+		width auto
+		position absolute
 
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) { }
