@@ -117,6 +117,10 @@ nav ul li {
   -webkit-transform: scale(1.2);
 }
 @media (max-width: 576px) {
+  #icon-out {
+    right: 0%;
+    position: absolute;
+  }
   .btn-toggle {
     display: none;
   }
@@ -130,7 +134,6 @@ nav ul li {
     display: inline-flex;
   }
   .sidebar {
-    text-align: center;
     background-color: rgba(0,47,48,0.75);
     -webkit-box-shadow: 6px -2px 12px -5px rgba(0,0,0,0.75);
     -moz-box-shadow: 6px -2px 12px -5px rgba(0,0,0,0.75);
