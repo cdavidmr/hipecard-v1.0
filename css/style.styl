@@ -11,7 +11,7 @@ fontmain = 'Ubuntu Condensed', sans-serif
 fontnav = 16px  
 fontsideicon = 24px 
 fsubtitle = 24px
-colorhover = #d6ff51
+colorhover = rgba(1, 86, 37, 0.5)
 fontsideiconmin = 18px
 box-shadow()
 	-webkit-box-shadow arguments
@@ -68,24 +68,29 @@ nav ul li
 	z-index 1
 .btn-toggle
 	font-size ficons
-.btn-toggle:active, .social:active
+.nav-icons:active
+	transform scale(0.9)
+	background-color btnclick
+.btn-toggle:active
 	border-radius 50%
 	background-color btnclick
+	transform scale(1.1)
 .brand
 	margin-top -3px
 	font fontbrand
 .brand:hover, .btn-toggle:hover
 	color colorhover
-.social:hover
+.nav-icons:hover
 	background-color colorhover
 .nav-right
 	float right
 	margin-top 10px
 	margin-right 3px
 	padding-top 3px
-.social
-	background-color bgcolor
-	border-radius 50%
+.nav-icons
+	background-color #437272
+	border-radius 10%
+	color colorp
 	font-size 14px
 	margin 2px
 	margin-top -3px
@@ -120,7 +125,7 @@ nav ul li
 		transform rotate(0deg)
 	}
 	to { 
-		transform rotate(360deg)
+		transform rotate(90deg)
 	}
 }
 //Responsive
@@ -149,8 +154,7 @@ nav ul li
 	.ulside
 		padding 10px
 	.ulside li i
-		display none
-		
+		display none		
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px)
 	.brand
@@ -161,8 +165,6 @@ nav ul li
 			display inline-flex
 			transform rotate(0deg)
 			transition transform .150s
-	.iconr:hover
-		animation rotateicons .3s
 	.liside:hover
 		span
 			transform rotate(-15deg)
