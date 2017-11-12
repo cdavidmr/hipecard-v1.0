@@ -5,13 +5,13 @@ bgcolor = #d1ccbe
 colorp = white //color letra principal 
 bgsidebar = #006d55
 btnclick = rgba(1, 20, 4, .4)
+colorhover = #ffb200
 ficons = 24px
 fontbrand = 22px 'Dosis', sans-serif
 fontmain = 'Ubuntu Condensed', sans-serif
 fontnav = 16px  
 fontsideicon = 24px 
 fsubtitle = 24px
-colorhover = rgba(1, 86, 37, 0.5)
 fontsideiconmin = 18px
 box-shadow()
 	-webkit-box-shadow arguments
@@ -89,11 +89,11 @@ nav ul li
 	padding-top 3px
 .nav-icons
 	background-color #437272
-	border-radius 10%
+	border-radius 5px
 	color colorp
 	font-size 14px
 	margin 2px
-	margin-top -3px
+	margin-top -4px
 	padding 5px
 .subtitle
 	cursor pointer
@@ -101,21 +101,15 @@ nav ul li
 .ulside
 	padding 15px
 //side icon animations
-.ulside li i
-	font-size 12px
-	left -100%
+.liside i
+	display none
+	font-size 14px
 	padding-left 7px
 	padding-top 25px
 	position absolute
-	transition left .150s
 .liside:hover
 	color colorhover
 	cursor pointer
-	i
-		left 0%
-		padding-left 7px
-		padding-top 25px
-		position absolute
 .liside:active
 	i
 		transform scale(1.2)
@@ -152,25 +146,11 @@ nav ul li
 		width 100%
 		position absolute
 	.ulside
-		padding 10px
-	.ulside li i
+		padding 10px	
+	.nav-icons span
 		display none		
 // Medium devices (tablets, 768px and up)
-@media (min-width: 768px)
-	.brand
-		margin-left -10px
-	.liside
-		padding 5px 5px 10px 5px
-		span 
-			display inline-flex
-			transform rotate(0deg)
-			transition transform .150s
-	.liside:hover
-		span
-			transform rotate(-15deg)
-
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px)
+@media (min-width: 577px)
 	.sidebar
 		background-color bgsidebar
 		box-shadow 6px -2px 12px -5px rgba(0,0,0,0.75)
@@ -180,6 +160,23 @@ nav ul li
 		left 0%
 		width auto
 		position absolute
+	.brand
+		margin-left -10px
+	.liside
+		padding 5px 5px 10px 5px
+		span 
+			display inline-flex
+			transform rotate(0deg)
+			transition transform .150s
+	.liside:hover
+		i
+			display inline-flex
+			left 0%
+		span
+			transform rotate(-15deg)
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) { }
 
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) { }

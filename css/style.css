@@ -73,10 +73,10 @@ nav ul li {
 }
 .brand:hover,
 .btn-toggle:hover {
-  color: rgba(1,86,37,0.5);
+  color: #ffb200;
 }
 .nav-icons:hover {
-  background-color: rgba(1,86,37,0.5);
+  background-color: #ffb200;
 }
 .nav-right {
   float: right;
@@ -86,11 +86,11 @@ nav ul li {
 }
 .nav-icons {
   background-color: #437272;
-  border-radius: 10%;
+  border-radius: 5px;
   color: #fff;
   font-size: 14px;
   margin: 2px;
-  margin-top: -3px;
+  margin-top: -4px;
   padding: 5px;
 }
 .subtitle {
@@ -100,23 +100,16 @@ nav ul li {
 .ulside {
   padding: 15px;
 }
-.ulside li i {
-  font-size: 12px;
-  left: -100%;
+.liside i {
+  display: none;
+  font-size: 14px;
   padding-left: 7px;
   padding-top: 25px;
   position: absolute;
-  -webkit-transition: left 0.15s;
 }
 .liside:hover {
-  color: rgba(1,86,37,0.5);
+  color: #ffb200;
   cursor: pointer;
-}
-.liside:hover i {
-  left: 0%;
-  padding-left: 7px;
-  padding-top: 25px;
-  position: absolute;
 }
 .liside:active i {
   -webkit-transform: scale(1.2);
@@ -153,27 +146,11 @@ nav ul li {
   .ulside {
     padding: 10px;
   }
-  .ulside li i {
+  .nav-icons span {
     display: none;
   }
 }
-@media (min-width: 768px) {
-  .brand {
-    margin-left: -10px;
-  }
-  .liside {
-    padding: 5px 5px 10px 5px;
-  }
-  .liside span {
-    display: inline-flex;
-    -webkit-transform: rotate(0deg);
-    -webkit-transition: transform 0.15s;
-  }
-  .liside:hover span {
-    -webkit-transform: rotate(-15deg);
-  }
-}
-@media (min-width: 992px) {
+@media (min-width: 577px) {
   .sidebar {
     background-color: #006d55;
     -webkit-box-shadow: 6px -2px 12px -5px rgba(0,0,0,0.75);
@@ -185,6 +162,24 @@ nav ul li {
     left: 0%;
     width: auto;
     position: absolute;
+  }
+  .brand {
+    margin-left: -10px;
+  }
+  .liside {
+    padding: 5px 5px 10px 5px;
+  }
+  .liside span {
+    display: inline-flex;
+    -webkit-transform: rotate(0deg);
+    -webkit-transition: transform 0.15s;
+  }
+  .liside:hover i {
+    display: inline-flex;
+    left: 0%;
+  }
+  .liside:hover span {
+    -webkit-transform: rotate(-15deg);
   }
 }
 @-moz-keyframes rotateicons {
