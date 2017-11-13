@@ -3,6 +3,6 @@ $(function() {
 		x = $("#btn-x");
 		x.toggleClass('icon-menu');
 		x.toggleClass('icon-x');
-		$("#side").animate({'width': 'toggle'}, 200);	
+		$("#side").animate({'width': 'toggle'}, 150);	
 	});
 });
